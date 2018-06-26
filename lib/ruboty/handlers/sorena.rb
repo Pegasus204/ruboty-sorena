@@ -3,7 +3,7 @@
 module Ruboty
   module Handlers
     class Sorena < Base
-      on /それな|sorena/i, name: "sorena", description: "Request それな", all: true
+      on /^(それな|sorena)$/i, name: "sorena", description: "Request それな", all: true
 
       def sorena(message)
         unless room(message.from) =~ ignored_channel
